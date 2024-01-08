@@ -48,10 +48,14 @@ h1 {
 .license-plate {
     max-width: 150px;
     margin: 10px;
+    padding: 10px;
 }
 
 .images {
-    max-width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
 }
 
 .button {

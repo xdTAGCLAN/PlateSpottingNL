@@ -6,18 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>European License Plates</title>
+    <script>
+        // Function to update the visitor counter
+        function updateCounter() {
+            // Get the current count from the local storage
+            var count = localStorage.getItem('visitCount') || 0;
+
+            // Increment the count
+            count++;
+
+            // Update the counter display
+            document.getElementById('visitorCount').innerText = count;
+
+            // Store the updated count in local storage
+            localStorage.setItem('visitCount', count);
+        }
+    </script>
 </head>
 
-<body>
+<body onload="updateCounter()">
     <div class="container">
         <h1>European License Plates</h1>
-            <div class="info-box">
-                <p align="center">All of the images on this were photographed in the Netherlands and the collection of images should be quickly expanding. To view all of my spots, visit <a href="https://platesmania.com/user98708" target="_blank">my platesmania profile</a>.</p>
-            </div>
-    <ul class="countries-list">
+        <div class="info-box">
+            <p align="center">All of the images on this were photographed in the Netherlands and the collection of images should be quickly expanding. To view all of my spots, visit <a href="https://platesmania.com/user98708" target="_blank">my platesmania profile</a>.</p>
+        </div>
+        <p>Total Visitors: <span id="visitorCount">0</span></p>
+        <ul class="countries-list">
             <li><a href="belarus.html" class="country-link" data-country="belarus">Belarus</a></li>
             <li><a href="belgium.html" class="country-link" data-country="belgium">Belgium</a></li>
-            <li><a href="bulgaria" class="country-link" data-country="bulgaria">Bulgaria</a></li>
             <li><a href="denmark.html" class="country-link" data-country="denmark">Denmark</a></li>
             <li><a href="france.html" class="country-link" data-country="france">France</a></li>
             <li><a href="germany.html" class="country-link" data-country="germany">Germany</a></li>

@@ -51,6 +51,13 @@ h1 {
     padding: 10px;
 }
 
+.images {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
 .button {
     display: block;
     margin: 20px auto;

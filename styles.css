@@ -7,11 +7,11 @@ body {
 }
 
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #333;
+    max-width: 900px;
+    margin: 30px auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -19,10 +19,14 @@ h1 {
     color: #007BFF;
 }
 
+h2 {
+    margin-top: 30px;
+    color: #FFA500;
+}
+
 .countries-list {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -33,10 +37,13 @@ h1 {
     margin-bottom: 10px;
 }
 
-.country-link {
+.countries-list a {
     text-decoration: none;
     color: #007BFF;
-    font-weight: bold;
+}
+
+.countries-list a:hover {
+    color: #0056b3;
 }
 
 .license-plates {
@@ -76,9 +83,16 @@ h1 {
 }
 
 .info-box {
-    border: 2px solid #222;
-    padding: 10px;
+    background: #444;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.info-box a {
+    color: #007BFF;
 }
 
 .menu {

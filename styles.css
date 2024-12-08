@@ -1,210 +1,138 @@
-/* General styles for the body and html to ensure full height and scrollability */
-html, body {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    height: 100%;
-    overflow-y: auto; /* Enable vertical scrolling */
-    font-family: Arial, sans-serif; /* Set a default font */
-    background-color: #f4f4f9; /* Light background color */
+    background-color: #222;
+    color: #fff;
 }
 
-/* Container styling */
 .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #333;
     padding: 20px;
-    min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
-    background-color: #fff; /* White background for the content area */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the main heading */
 h1 {
     text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 30px;
+    color: #007BFF;
 }
 
-/* Upload form styling */
-form {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-form label {
-    font-size: 1.1rem;
-    margin-right: 10px;
-}
-
-form input[type="file"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-form button:hover {
-    background-color: #45a049;
-}
-
-/* Styling the search section */
-h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-form input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 300px;
-    margin-right: 10px;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #2196F3;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-form button:hover {
-    background-color: #0b7dda;
-}
-
-/* Upload status message */
-#uploadStatus {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Style for displaying images in a flexbox gallery layout */
-.image-gallery, .results-gallery {
+.countries-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px; /* Space above the galleries */
+    justify-content: space-between;
 }
 
-/* Wrapper around each image and its corresponding license plate text */
-.image-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling for the images */
-.gallery-image {
-    max-width: 150px;
-    max-height: 100px;
-    cursor: pointer;
-    object-fit: cover;
+.countries-list li {
+    flex-basis: 48%; /* Two columns with a small gap */
     margin-bottom: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
 }
 
-.gallery-image:hover {
-    border-color: #2196F3;
-}
-
-/* Paragraph styling for license plate text */
-p {
-    font-size: 14px;
-    color: #333;
-    margin-top: 5px;
-    text-align: center;
-}
-
-/* Modal styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
-    overflow: auto; /* Ensure scrolling within the modal if content is too large */
-}
-
-.modal-content {
-    display: block;
-    margin: 10% auto;
-    max-width: 80%;
-    border-radius: 10px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #fff;
-    font-size: 35px;
+.country-link {
+    text-decoration: none;
+    color: #007BFF;
     font-weight: bold;
+}
+
+.license-plates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.license-plate {
+    max-width: 150px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.images {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.close:hover {
-    color: #ccc;
+.button:hover {
+    background-color: #0056b3;
 }
 
-/* Caption text styling inside the modal */
-#caption {
+.info-box {
+    border: 2px solid #222;
+    padding: 10px;
     text-align: center;
-    color: #fff;
-    padding: 10px 0;
-    font-size: 1.2rem;
 }
 
-/* Style the footer section */
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #f8f8f8;
-    text-align: center;
-    width: 100%;
-}
-
-footer .explanation {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #333;
-}
-
-footer h2 {
-    font-size: 24px;
+.menu {
+    position: relative;
+    display: inline-block;
     margin-bottom: 10px;
 }
 
-footer p {
-    font-size: 16px;
-    line-height: 1.6;
+.menu-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-content li {
+    padding: 10px;
+}
+
+.menu-content a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+}
+
+.menu-content a:hover {
+    color: #007BFF;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+/* Styling links for better visibility in dark theme */
+a {
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
 }

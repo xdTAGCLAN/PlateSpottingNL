@@ -137,16 +137,16 @@ a:hover {
     color: #0056b3;
 }
 
-.spot-container {
+.spot {
     display: flex;
-    flex-direction: column; /* Stack image and text */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Align text */
-    width: fit-content; /* Adjust width based on content */
+    flex-direction: column;
+    align-items: center; /* Centers the text under the image */
+    text-align: center; /* Ensures the text is centered */
 }
 
 .spot-image img {
-    width: var(--img-size, 150px); /* Default width, but allows dynamic changes */
-    display: block;
+    max-width: 200px; /* Ensures responsiveness */
+    height: auto;
+    display: block; /* Prevents extra space below images */
     margin-bottom: 10px; /* Space between image and text */
 }
